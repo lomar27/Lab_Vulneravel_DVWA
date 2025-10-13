@@ -1,0 +1,8 @@
+#Descoberta de Ip's na Rede
+sudo nmap -sn 192.168.50.0/24
+
+#Descobrir serviços ativos no Host Alvo
+sudo nmap -sV 192.168.50.109
+
+#Criacao da documentacao com as portas abertas disponiveis
+sudo nmap -sV 192.168.50.109 | grep open > portas_abertas.txt

